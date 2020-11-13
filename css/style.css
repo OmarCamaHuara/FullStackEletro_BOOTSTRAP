@@ -89,7 +89,14 @@ box.formulario input[type="submit"]:hover{
 #rodape{
     text-align: center;
 }
-.preco{
-    color: red;
-    font-weight: bolder;
+
+.logo{
+    width: 150px;
+}
+.nav{
+    background: red;
+}
+
+.footer-copyright{
+    background: #e92a2a79;
 }

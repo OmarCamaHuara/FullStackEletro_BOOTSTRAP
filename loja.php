@@ -15,9 +15,9 @@
 
     
     <!--Inicio do Corpo-->
-    <div class="container">
+    <div class="container mt-5">
     <header>
-        <h2>Nossas Lojas!</h2>
+        <h2 class="text-info">Nossas Lojas!</h2>
     </header>
     <hr>
     <section class="container filiais">
@@ -51,11 +51,9 @@
     <br><br><br><br><br>
     
     <!--Inicio do Rodape-->
-    <footer id="rodape">
-        <p id="formasPagamento"><b>Formas de pagamento</b></p>
-        <img src="./img/usapagos.png" alt="Formas de pagamento">
-        <p>&copy Recode Pro</p>
-    </footer>
+    <?php
+        include('footer.html');
+    ?>
     <!--Fin do Rodape-->
 </body>
 </html>

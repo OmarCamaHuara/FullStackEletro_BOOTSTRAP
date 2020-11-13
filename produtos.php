@@ -30,24 +30,13 @@
 
     <!--inicio do Corpo-->
 
-    <div class="container">
+    <div class="container mt-5">
     <header>
-        <h2>Producto!</h2>
+        <h2 class="text-info">Producto!</h2>
     </header>
-    <hr>
-    <section class="categorias">
-        <h3>Categorias</h3>
-            <ul>
-                <li onclick="exibirTodo()">Todos [12]</li>
-                <li onclick="exibirCategoria('geladeira')">Geladerias [3]</li>
-                <li onclick="exibirCategoria('fogao')">Fogões [2]</li>
-                <li onclick="exibirCategoria('microondas')">Microondas [3]</li>
-                <li onclick="exibirCategoria('lavaRoupa')">Labadouras de ropas [2]</li>
-                <li onclick="exibirCategoria('lavaLouca')">Lava-louças [2]</li>
-            </ul>
-    </section>
-    <section class="produtos">
-
+    <hr class="shadow">
+    <section class="container produtos ml-5">
+        <div class="row justify-content-center pl-5 mf-5">
             <?php
                 $sql = "select * from produtos";
                 $result = $conn->query($sql);
@@ -70,17 +59,7 @@
                     echo "Nenhum produto cadastrado!";
                 }  
             ?>  
-
-                
-            <div class="box_produto" id="geladeira" style="display: block;">
-            <img src="./img/Geladera1.png" alt="Geladeira" width='128px' onclick="destaque(this)">
-                <br>
-                Geladeira Frost Free Brastemp Side Inverse  540Litros
-                <hr>
-                <strike>R$ 6.389,00</strike>
-                <br>
-                <p class="preco">R$5.019,00</p>  
-        </div>
+        </div>   
     </section>
     </div>
     
@@ -88,11 +67,17 @@
 
     
     <!--Inicio do Rodape-->
-    <footer id="rodape">
-        <p id="formasPagamento"><b>Formas de pagamento</b></p>
-        <img src="./img/usapagos.png" alt="Formas de pagamento">
-        <p>&copy Recode Pro</p>
-    </footer>
+    <?php
+        include('footer.html');
+    ?>
     <!--Fin do Rodape-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
